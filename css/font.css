@@ -1,0 +1,49 @@
+/* kanit-300 - latin */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/kanit-v7-latin/kanit-v7-latin-300.eot"); /* IE9 Compat Modes */
+  src: local("Kanit Light"), local("Kanit-Light"),
+    /* IE6-IE8 */ url("./fonts/kanit-v7-latin/kanit-v7-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-300.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/kanit-v7-latin/kanit-v7-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-300.svg") format("svg"); /* Legacy iOS */
+}
+/* kanit-regular - latin */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/kanit-v7-latin/kanit-v7-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Kanit Regular"), local("Kanit-Regular"),
+    /* IE6-IE8 */ url("./fonts/kanit-v7-latin/kanit-v7-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-regular.svg") format("svg"); /* Legacy iOS */
+}
+/* kanit-500 - latin */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/kanit-v7-latin/kanit-v7-latin-500.eot"); /* IE9 Compat Modes */
+  src: local("Kanit Medium"), local("Kanit-Medium"),
+    /* IE6-IE8 */ url("./fonts/kanit-v7-latin/kanit-v7-latin-500.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-500.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/kanit-v7-latin/kanit-v7-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/kanit-v7-latin/kanit-v7-latin-500.svg") format("svg"); /* Legacy iOS */
+}

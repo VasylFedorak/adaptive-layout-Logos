@@ -1,0 +1,667 @@
+@import "./reset.css";
+@import "./font.css";
+
+/*Основні стилі*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*основні кольри шрифту*/
+  --white-color: #fff;
+  --black-color: #000000;
+  --light-black: #1f1f1d;
+
+  /*розширення адаптивних екранів*/
+  --mobile: 295px;
+  --tablet: 720px;
+  --medium-desktop: 940px;
+  --large-device: 1140px;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.container {
+  position: relative;
+  width: 295px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 920px;
+  }
+
+  .container .menu-button-div {
+    left: -100px;
+  }
+}
+
+/*стилі для хедера*/
+header {
+  background: var(--white-color);
+}
+
+.head-height {
+  height: 65px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button-div {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 10px;
+}
+
+.menu-button {
+  position: relative;
+
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.menu-button:hover .main-menu {
+  display: block;
+}
+
+.main-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  width: 200px;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding-top: 52px;
+  padding-bottom: 55px;
+  padding-left: 66px;
+}
+
+.menu-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: var(--black-color);
+}
+
+.menu-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1240px) {
+  .header-logo-img {
+    width: 157px;
+  }
+
+  .head-height {
+    height: 120px;
+  }
+}
+
+/*секція слайдерa*/
+
+.slider {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    width: 768px;
+    display: flex;
+  }
+
+  .slider .slider-left {
+    width: 50%;
+    height: 354px;
+    background-image: url(../images/philip-martin-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slider .slider-right {
+    width: 50%;
+    height: 354px;
+    padding: 72px 20px;
+  }
+
+  .menu-button .main-menu {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .slider {
+    width: 1240px;
+  }
+
+  .slider .slider-left {
+    width: 50%;
+    height: 570px;
+    background-image: url(../images/philip-martin-1240.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slider .slider-right {
+    width: 50%;
+    height: 570px;
+    padding: 128px 104px 124px;
+  }
+
+  .slider .slider-style {
+    display: block;
+  }
+
+  .slider .slider-date {
+    font-size: 14px;
+    letter-spacing: 7px;
+  }
+
+  .slider-article .slider-title {
+    font-size: 28px;
+    margin-bottom: 23px;
+  }
+
+  .slider .slider-article-top {
+    margin-bottom: 36px;
+  }
+
+  .slider .slider-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .slider {
+    width: 1440px;
+  }
+
+  .slider .slider-left {
+    background-image: url(../images/philip-martin-1440.jpg);
+  }
+
+  .slider .slider-right {
+    padding: 110px 108px 150px;
+  }
+
+  .slider .slider-article-top {
+    margin-bottom: 66px;
+  }
+
+  .slider-article .slider-title {
+    margin-bottom: 29px;
+  }
+
+  .slider .slider-text {
+    margin-bottom: 54px;
+  }
+}
+
+.slider-left {
+  width: 100%;
+  height: 294px;
+  background-image: url(../images/philip-martin-320.jpg);
+}
+
+.slider-right {
+  width: 100%;
+  height: 246px;
+  background-color: var(--black-color);
+  padding: 15px 12px 32px;
+}
+
+/* .slider-article {
+  padding: 15px 12px 32px;
+} */
+
+.slider-article-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slider-date {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 6px;
+  color: var(--white-color);
+}
+
+.slider-style {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  color: var(--white-color);
+}
+
+.slider-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.slider-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.slider-button {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  padding: 11px 66px;
+  text-decoration: none;
+}
+
+/*Секція feature*/
+
+.featured-section {
+  padding-top: 43px;
+  padding-bottom: 43px;
+}
+
+.featured-section-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--light-black);
+}
+
+@media screen and (max-width: 767px) {
+  .featured-section-title {
+    letter-spacing: 0.5px;
+  }
+
+  .featured-flex > article {
+    margin-bottom: 27px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .featured-section-title {
+    margin-bottom: 21px;
+  }
+}
+
+.feature-date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.feature-sign {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black-color);
+}
+
+.feature-date-time {
+  letter-spacing: 6px;
+}
+
+.feature-style {
+  display: none;
+  text-align: right;
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-style {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .featured-flex .featured-section-sub-title {
+    font-size: 24px;
+  }
+
+  .featured-flex .featured-section-text {
+    font-size: 18px;
+  }
+
+  .container .featured-flex.first {
+    margin-bottom: 86px;
+  }
+
+  .feature-date {
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
+  .small-flex-item .featured-section-sub-title-small {
+    font-size: 18px;
+  }
+}
+
+.featured-section-sub-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--light-black);
+  margin-bottom: 20px;
+}
+
+.featured-section-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--light-black);
+}
+
+@media screen and (min-width: 768px) {
+  .featured-flex {
+    display: flex;
+  }
+
+  .featured-flex > article {
+    width: 50%;
+  }
+
+  .featured-flex > article:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .featured-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .featured-flex.first {
+    margin-bottom: 36px;
+  }
+
+  .featured-flex.second {
+    margin-bottom: 49px;
+  }
+
+  .interview-section .featured-flex {
+    margin-bottom: 53px;
+  }
+
+  .news-section .featured-flex {
+    margin-bottom: 48px;
+  }
+}
+
+.feature-date-time-small {
+  letter-spacing: 6px;
+  color: var(--light-black);
+}
+
+.featured-section-sub-title-small {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--light-black);
+}
+
+.small-flex-item .feature-style {
+  display: block;
+}
+
+.small-flex-item .feature-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*основна кнопка*/
+
+.section-button {
+  display: block;
+  box-sizing: border-box;
+  padding: 11px 88px 10px;
+  width: 238px;
+  height: 42px;
+  background: #303030;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--white-color);
+  margin: 0 auto;
+}
+
+/*Секція подій*/
+
+.event-left {
+  width: 100%;
+  height: 245px;
+  background-image: url(../images/photo-1520-320.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.event-info {
+  width: 100%;
+  height: 175px;
+  padding: 40px 40px;
+  background-color: var(--black-color);
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .event-flex {
+    display: flex;
+  }
+
+  .event-left {
+    width: 50%;
+    height: 275px;
+    background-image: url(../images/photo-1520-768.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .event-info {
+    width: 50%;
+    height: 275px;
+    padding: 90px 80px;
+    background-color: var(--black-color);
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .event-left {
+    height: 360px;
+    background-image: url(../images/photo-1520-1140.jpg);
+  }
+
+  .event-info {
+    height: 360px;
+    padding: 124px 57px;
+  }
+
+  .event-flex .event-container-title {
+    font-size: 34px;
+  }
+}
+
+.event-container-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 27px;
+
+  color: var(--white-color);
+}
+
+/*Кнопка підписки*/
+
+.subscribe-button {
+  width: 198px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: 1px solid var(--white-color);
+  padding: 11px 25px;
+  margin: 0 auto;
+  display: block;
+}
+
+/*секція інтерв'ю*/
+
+.interview-section {
+  padding-top: 43px;
+  padding-bottom: 43px;
+}
+
+@media screen and (min-width: 768px) {
+  .interview-section {
+    padding-top: 53px;
+    padding-bottom: 33px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .interview-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .news-section .featured-flex {
+    margin-bottom: 60px;
+  }
+  main .news-section {
+    padding-bottom: 87px;
+  }
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--light-black);
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    margin-bottom: 32px;
+  }
+}
+
+/*Секція новин*/
+
+.news-section {
+  padding-bottom: 43px;
+}
+
+@media screen and (min-width: 768px) {
+  .news-section {
+    padding-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1140px;
+  }
+
+  .featured-section {
+    padding-bottom: 70px;
+  }
+
+  .featured-section-title {
+    margin-bottom: 30px;
+  }
+
+  .featured-flex .feature-date {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+
+  .container .featured-flex.first {
+    margin-bottom: 60px;
+  }
+
+  .featured-flex.second {
+    margin-bottom: 63px;
+  }
+
+  .interview-section .featured-flex {
+    margin-bottom: 38px;
+  }
+
+  main .news-section {
+    padding-bottom: 100px;
+  }
+
+  .news-section .featured-flex {
+    margin-bottom: 31px;
+  }
+}
+
+/*Підвал сайту*/
+
+.footer-section {
+  background-color: var(--black-color);
+  padding-bottom: 25px;
+}
+
+.footer {
+  height: 163px;
+}
+
+.copy-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white-color);
+}
