@@ -23,11 +23,17 @@
               height="35"
               aria-label="переключатель мобільного меню"
             >
-              <use href="./images/symbol-defs.svg#icon-menu_40px"></use>
-              <!-- <use href="./images/symbol-defs.svg#icon-close_40px"></use> -->
+              <use
+                class="icon-menu"
+                href="./images/symbol-defs.svg#icon-menu_40px"
+              ></use>
+              <use
+                class="icon-close"
+                href="./images/symbol-defs.svg#icon-close_40px"
+              ></use>
             </svg>
 
-            <ul class="main-menu">
+            <ul class="main-menu" id="main-menu" data-menu>
               <li class="menu-item">Home</li>
               <li class="menu-item">Preferences</li>
               <li class="menu-item">Contacts</li>
@@ -249,16 +255,16 @@
     </main>
 
     <footer class="footer-section">
-      <div class="container">
-        <div class="footer flex">
+      <div class="container footer">
+        <div class="flex">
           <a class="header-logo" href="#">
-            <img src="./images/Group 2-min.png" alt="suffix" />
+            <img src="./images/Group 2-min.png" alt="suffix" width="142px" />
           </a>
         </div>
         <p class="copy-text">Designed by Suffix</p>
       </div>
     </footer>
 
-    <!-- <script src="./JS/menu.js"></script> -->
+    <script src="./JS/menu.js"></script>
   </body>
 </html>

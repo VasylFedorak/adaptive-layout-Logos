@@ -36,22 +36,6 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .container {
-    width: 920px;
-  }
-
-  .container .menu-button-div {
-    left: -100px;
-  }
-}
-
 /*стилі для хедера*/
 header {
   background: var(--white-color);
@@ -76,16 +60,15 @@ header {
 
 .menu-button {
   position: relative;
-
   display: inline-flex;
   padding: 0;
   border: 0;
   background-color: transparent;
 }
 
-.menu-button:hover .main-menu {
+/* .menu-button:hover .main-menu {
   display: block;
-}
+} */
 
 .main-menu {
   display: none;
@@ -101,6 +84,10 @@ header {
   padding-left: 66px;
 }
 
+.main-menu.is-open {
+  display: block;
+}
+
 .menu-item {
   font-weight: 500;
   font-size: 16px;
@@ -108,19 +95,20 @@ header {
   text-decoration-line: underline;
   color: var(--black-color);
 }
-
 .menu-item:not(:last-child) {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 1240px) {
-  .header-logo-img {
-    width: 157px;
-  }
+.menu-button .icon-close {
+  display: none;
+}
 
-  .head-height {
-    height: 120px;
-  }
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 /*секція слайдерa*/
@@ -128,102 +116,6 @@ header {
 .slider {
   width: 320px;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .slider {
-    width: 768px;
-    display: flex;
-  }
-
-  .slider .slider-left {
-    width: 50%;
-    height: 354px;
-    background-image: url(../images/philip-martin-768.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .slider .slider-right {
-    width: 50%;
-    height: 354px;
-    padding: 72px 20px;
-  }
-
-  .menu-button .main-menu {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .slider {
-    width: 1240px;
-  }
-
-  .slider .slider-left {
-    width: 50%;
-    height: 570px;
-    background-image: url(../images/philip-martin-1240.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .slider .slider-right {
-    width: 50%;
-    height: 570px;
-    padding: 128px 104px 124px;
-  }
-
-  .slider .slider-style {
-    display: block;
-  }
-
-  .slider .slider-date {
-    font-size: 14px;
-    letter-spacing: 7px;
-  }
-
-  .slider-article .slider-title {
-    font-size: 28px;
-    margin-bottom: 23px;
-  }
-
-  .slider .slider-article-top {
-    margin-bottom: 36px;
-  }
-
-  .slider .slider-text {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 36px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .slider {
-    width: 1440px;
-  }
-
-  .slider .slider-left {
-    background-image: url(../images/philip-martin-1440.jpg);
-  }
-
-  .slider .slider-right {
-    padding: 110px 108px 150px;
-  }
-
-  .slider .slider-article-top {
-    margin-bottom: 66px;
-  }
-
-  .slider-article .slider-title {
-    margin-bottom: 29px;
-  }
-
-  .slider .slider-text {
-    margin-bottom: 54px;
-  }
 }
 
 .slider-left {
@@ -238,10 +130,6 @@ header {
   background-color: var(--black-color);
   padding: 15px 12px 32px;
 }
-
-/* .slider-article {
-  padding: 15px 12px 32px;
-} */
 
 .slider-article-top {
   display: flex;
@@ -312,22 +200,6 @@ header {
   color: var(--light-black);
 }
 
-@media screen and (max-width: 767px) {
-  .featured-section-title {
-    letter-spacing: 0.5px;
-  }
-
-  .featured-flex > article {
-    margin-bottom: 27px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .featured-section-title {
-    margin-bottom: 21px;
-  }
-}
-
 .feature-date {
   display: flex;
   justify-content: space-between;
@@ -352,35 +224,6 @@ header {
   text-decoration-line: underline;
 }
 
-@media screen and (min-width: 768px) {
-  .feature-style {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .featured-flex .featured-section-sub-title {
-    font-size: 24px;
-  }
-
-  .featured-flex .featured-section-text {
-    font-size: 18px;
-  }
-
-  .container .featured-flex.first {
-    margin-bottom: 86px;
-  }
-
-  .feature-date {
-    margin-top: 21px;
-    margin-bottom: 21px;
-  }
-
-  .small-flex-item .featured-section-sub-title-small {
-    font-size: 18px;
-  }
-}
-
 .featured-section-sub-title {
   font-weight: 500;
   font-size: 18px;
@@ -394,43 +237,6 @@ header {
   font-size: 14px;
   line-height: 1.5;
   color: var(--light-black);
-}
-
-@media screen and (min-width: 768px) {
-  .featured-flex {
-    display: flex;
-  }
-
-  .featured-flex > article {
-    width: 50%;
-  }
-
-  .featured-flex > article:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  .featured-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .featured-flex.first {
-    margin-bottom: 36px;
-  }
-
-  .featured-flex.second {
-    margin-bottom: 49px;
-  }
-
-  .interview-section .featured-flex {
-    margin-bottom: 53px;
-  }
-
-  .news-section .featured-flex {
-    margin-bottom: 48px;
-  }
 }
 
 .feature-date-time-small {
@@ -491,44 +297,6 @@ header {
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 768px) {
-  .event-flex {
-    display: flex;
-  }
-
-  .event-left {
-    width: 50%;
-    height: 275px;
-    background-image: url(../images/photo-1520-768.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .event-info {
-    width: 50%;
-    height: 275px;
-    padding: 90px 80px;
-    background-color: var(--black-color);
-    box-sizing: border-box;
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .event-left {
-    height: 360px;
-    background-image: url(../images/photo-1520-1140.jpg);
-  }
-
-  .event-info {
-    height: 360px;
-    padding: 124px 57px;
-  }
-
-  .event-flex .event-container-title {
-    font-size: 34px;
-  }
-}
-
 .event-container-title {
   font-weight: 500;
   font-size: 18px;
@@ -561,14 +329,245 @@ header {
   padding-bottom: 43px;
 }
 
+/*Секція новин*/
+
+.news-section {
+  padding-bottom: 43px;
+}
+
+/*Підвал сайту*/
+
+.footer-section {
+  width: 100%;
+  background-color: var(--black-color);
+  padding-bottom: 25px;
+}
+
+.footer {
+  height: 163px;
+}
+
+.footer .flex {
+  height: 100%;
+  align-items: center;
+}
+
+.copy-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--white-color);
+}
+
+@media screen and (max-width: 767px) {
+  .featured-section-title {
+    letter-spacing: 0.5px;
+  }
+
+  .featured-flex > article {
+    margin-bottom: 27px;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+
+  .slider {
+    width: 768px;
+    display: flex;
+  }
+
+  .slider .slider-left {
+    width: 50%;
+    height: 354px;
+    background-image: url(../images/philip-martin-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slider .slider-right {
+    width: 50%;
+    height: 354px;
+    padding: 72px 20px;
+  }
+
+  .menu-button .main-menu {
+    width: 300px;
+  }
+
+  .featured-section-title {
+    margin-bottom: 21px;
+  }
+
+  .feature-style {
+    display: block;
+  }
+
+  .featured-flex {
+    display: flex;
+  }
+
+  .event-flex {
+    display: flex;
+  }
+
+  .event-left {
+    width: 50%;
+    height: 275px;
+    background-image: url(../images/photo-1520-768.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .event-info {
+    width: 50%;
+    height: 275px;
+    padding: 90px 80px;
+    background-color: var(--black-color);
+    box-sizing: border-box;
+  }
+
+  .featured-flex > article {
+    width: 50%;
+  }
+
+  .featured-flex > article:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .featured-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .featured-flex.first {
+    margin-bottom: 36px;
+  }
+
+  .featured-flex.second {
+    margin-bottom: 49px;
+  }
+
+  .interview-section .featured-flex {
+    margin-bottom: 53px;
+  }
+
+  .news-section .featured-flex {
+    margin-bottom: 48px;
+  }
+
   .interview-section {
     padding-top: 53px;
     padding-bottom: 33px;
   }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .news-section {
+    padding-bottom: 70px;
+  }
 }
 
 @media screen and (min-width: 1240px) {
+  .container {
+    width: 920px;
+  }
+
+  .container .menu-button-div {
+    left: -100px;
+  }
+
+  .header-logo-img {
+    width: 157px;
+  }
+
+  .head-height {
+    height: 120px;
+  }
+
+  .slider {
+    width: 1240px;
+  }
+
+  .slider .slider-left {
+    width: 50%;
+    height: 570px;
+    background-image: url(../images/philip-martin-1240.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slider .slider-right {
+    width: 50%;
+    height: 570px;
+    padding: 128px 104px 124px;
+  }
+
+  .slider .slider-style {
+    display: block;
+  }
+
+  .slider .slider-date {
+    font-size: 14px;
+    letter-spacing: 7px;
+  }
+
+  .slider-article .slider-title {
+    font-size: 28px;
+    margin-bottom: 23px;
+  }
+
+  .slider .slider-article-top {
+    margin-bottom: 36px;
+  }
+
+  .slider .slider-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 36px;
+  }
+
+  .featured-flex .featured-section-sub-title {
+    font-size: 24px;
+  }
+
+  .featured-flex .featured-section-text {
+    font-size: 18px;
+  }
+
+  .container .featured-flex.first {
+    margin-bottom: 86px;
+  }
+
+  .feature-date {
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+
+  .small-flex-item .featured-section-sub-title-small {
+    font-size: 18px;
+  }
+
+  .event-left {
+    height: 360px;
+    background-image: url(../images/photo-1520-1140.jpg);
+  }
+
+  .event-info {
+    height: 360px;
+    padding: 124px 57px;
+  }
+
+  .event-flex .event-container-title {
+    font-size: 34px;
+  }
+
   .interview-section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -580,35 +579,41 @@ header {
   main .news-section {
     padding-bottom: 87px;
   }
-}
 
-.section-title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: var(--light-black);
-  margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
   .section-title {
-    margin-bottom: 32px;
-  }
-}
-
-/*Секція новин*/
-
-.news-section {
-  padding-bottom: 43px;
-}
-
-@media screen and (min-width: 768px) {
-  .news-section {
-    padding-bottom: 70px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--light-black);
+    margin-bottom: 16px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .slider {
+    width: 1440px;
+  }
+
+  .slider .slider-left {
+    background-image: url(../images/philip-martin-1440.jpg);
+  }
+
+  .slider .slider-right {
+    padding: 110px 110px 150px;
+  }
+
+  .slider .slider-article-top {
+    margin-bottom: 66px;
+  }
+
+  .slider-article .slider-title {
+    margin-bottom: 29px;
+  }
+
+  .slider .slider-text {
+    margin-bottom: 54px;
+  }
+
   .container {
     width: 1140px;
   }
@@ -634,6 +639,10 @@ header {
     margin-bottom: 63px;
   }
 
+  .event-info {
+    padding: 124px 116px;
+  }
+
   .interview-section .featured-flex {
     margin-bottom: 38px;
   }
@@ -645,23 +654,4 @@ header {
   .news-section .featured-flex {
     margin-bottom: 31px;
   }
-}
-
-/*Підвал сайту*/
-
-.footer-section {
-  background-color: var(--black-color);
-  padding-bottom: 25px;
-}
-
-.footer {
-  height: 163px;
-}
-
-.copy-text {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--white-color);
 }
