@@ -338,9 +338,14 @@ header {
 /*Підвал сайту*/
 
 .footer-section {
-  width: 100%;
   background-color: var(--black-color);
   padding-bottom: 25px;
+}
+
+@media screen and (max-width: 320px) {
+  .footer-section {
+    width: 320px;
+  }
 }
 
 .footer {
